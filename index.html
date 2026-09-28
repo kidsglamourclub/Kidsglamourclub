@@ -1,150 +1,190 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kids Glamour Club | Beauty & Wellness Kindergeburtstage</title>
-  <meta name="description" content="Kids Glamour Club – Beauty- und Wellness-Kindergeburtstage direkt bei euch zu Hause in Stuttgart, Heilbronn und Umgebung.">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spa Party – Galerie</title>
+<style>
+  :root { --pink:#e8a7b8; --text:#4b3b40; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    color:var(--text); background:linear-gradient(180deg,#fff,#fff7f9);
+  }
+  .wrap { max-width:1200px; margin:auto; padding:42px 20px 60px; }
+  header { text-align:center; margin-bottom:32px; }
+  .eyebrow { letter-spacing:.18em; text-transform:uppercase; font-size:.75rem; color:#a46d7c; }
+  h1 { margin:.25rem 0 .5rem; font-family:Georgia,serif; font-size:clamp(2rem,5vw,3.4rem); font-weight:500; }
+  header p { max-width:650px; margin:auto; line-height:1.6; color:#755d64; }
+  .gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .card { margin:0; background:white; border-radius:18px; overflow:hidden;
+           box-shadow:0 7px 25px rgba(120,70,85,.10); }
+  .photo-button { border:0; padding:0; display:block; width:100%; background:none; cursor:zoom-in; }
+  .card img, .card video { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; }
+  .card video { background:#111; }
+  .card img { transition:transform .35s ease; }
+  .card:hover img { transform:scale(1.025); }
+  figcaption { padding:13px 15px 16px; font-size:.92rem; line-height:1.4; }
+  .lightbox { display:none; position:fixed; inset:0; z-index:10; background:rgba(25,16,20,.88);
+               align-items:center; justify-content:center; padding:20px; }
+  .lightbox.open { display:flex; }
+  .lightbox img { max-width:94vw; max-height:88vh; object-fit:contain; border-radius:10px; }
+  .close,.prev,.next { position:fixed; border:0; color:white; background:rgba(255,255,255,.16);
+                         width:44px; height:44px; border-radius:50%; font-size:24px; cursor:pointer; }
+  .close { top:18px; right:18px; } .prev { left:18px; top:50%; } .next { right:18px; top:50%; }
+  .counter { position:fixed; bottom:18px; color:white; font-size:.9rem; }
+  @media (max-width:800px) { .gallery { grid-template-columns:repeat(2,1fr); gap:12px; } }
+  @media (max-width:520px) { .wrap { padding:30px 12px 45px; }
+    .gallery { grid-template-columns:1fr; } figcaption { font-size:.88rem; } }
+</style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="logo" href="#start"><img src="logo.png" alt="Kids Glamour Club Logo"></a>
-      <nav>
-        <a href="#angebot">Angebot</a>
-        <a href="#ablauf">So funktioniert's</a>
-        <a href="#galerie">Galerie</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </div>
+<main class="wrap">
+  <header>
+    <div class="eyebrow">Unsere Erinnerungen</div>
+    <h1>Spa Party Galerie</h1>
+    <p>Liebevolle Dekoration, schöne Details und besondere Momente – festgehalten in Bildern und Videos.</p>
   </header>
-
-  <main>
-    <section id="start" class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Beauty · Wellness · Kindergeburtstag</p>
-          <h1>Ein Geburtstag voller Glamour, Spaß und Wellness.</h1>
-          <p class="lead">
-            Kids Glamour Club bringt die besondere Beauty- und Wellness-Party
-            direkt zu euch nach Hause – in Stuttgart, Heilbronn und Umgebung.
-          </p>
-          <div class="buttons">
-            <a class="button primary" href="#kontakt">Termin anfragen</a>
-            <a class="button secondary" href="#angebot">Angebote ansehen</a>
-          </div>
-          <p class="small">Ihr feiert entspannt zu Hause – wir kümmern uns um das Glamour-Erlebnis.</p>
-        </div>
-
-        <div class="hero-card">
-          <img class="hero-logo" src="logo.png" alt="Kids Glamour Club Logo">
-          <h2>Kids Glamour Club</h2>
-          <p>Der besondere Beauty- & Wellness-Kindergeburtstag.</p>
-          <div class="pill-row">
-            <span>Beauty</span>
-            <span>Wellness</span>
-            <span>Party</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="angebot" class="section">
-      <div class="container">
-        <p class="eyebrow">Unser Angebot</p>
-        <h2>Beauty & Wellness für einen ganz besonderen Geburtstag</h2>
-        <div class="cards">
-          <article class="card">
-            <div class="icon">✦</div>
-            <h3>Beauty-Party</h3>
-            <p>Ein glamouröses Geburtstagserlebnis mit kindgerechten Beauty-Momenten und viel Spaß.</p>
-          </article>
-          <article class="card">
-            <div class="icon">♡</div>
-            <h3>Wellness-Party</h3>
-            <p>Entspannen, verwöhnen lassen und gemeinsam einen besonderen Spa-Tag zu Hause erleben.</p>
-          </article>
-          <article class="card">
-            <div class="icon">❈</div>
-            <h3>Mottoparty</h3>
-            <p>Ein liebevoll gestaltetes Motto passend zum Geburtstag – mit Beauty, Wellness und Partygefühl.</p>
-          </article>
-        </div>
-        <div class="notice">
-          <strong>Du hast einen besonderen Wunsch?</strong>
-          <span>Schreib uns – wir besprechen gemeinsam, wie die Party aussehen soll.</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="ablauf" class="section soft">
-      <div class="container">
-        <p class="eyebrow">Ganz einfach</p>
-        <h2>So funktioniert eure Glamour-Party</h2>
-        <div class="steps">
-          <div class="step"><span>1</span><h3>Wunschtermin anfragen</h3><p>Schreibt uns euren Termin und die wichtigsten Wünsche.</p></div>
-          <div class="step"><span>2</span><h3>Party planen</h3><p>Wir besprechen Motto, Ablauf und das passende Angebot.</p></div>
-          <div class="step"><span>3</span><h3>Wir kommen zu euch</h3><p>Die Party findet bequem bei euch zu Hause statt.</p></div>
-          <div class="step"><span>4</span><h3>Glamour genießen</h3><p>Gemeinsam wird gefeiert, gelacht und verwöhnt.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="galerie" class="section">
-      <div class="container">
-        <p class="eyebrow">Ein kleiner Einblick</p>
-        <h2>So kann eure Party aussehen</h2>
-        <div class="video-wrap">
-          <video controls playsinline preload="metadata">
-            <source src="party-video.mp4" type="video/mp4">
+  <section class="gallery" aria-label="Fotogalerie">
+    
+        <figure class="card">
+          <button class="photo-button" type="button" aria-label="Bild vergrößern" onclick="openLightbox(0)">
+            <img src="galerie-01.jpg" alt="Galerie 01" loading="lazy">
+          </button>
+          <figcaption>Galerie 01</figcaption>
+        </figure>
+        <figure class="card">
+          <button class="photo-button" type="button" aria-label="Bild vergrößern" onclick="openLightbox(1)">
+            <img src="galerie-02.jpg" alt="Galerie 02" loading="lazy">
+          </button>
+          <figcaption>Galerie 02</figcaption>
+        </figure>
+        <figure class="card">
+          <button class="photo-button" type="button" aria-label="Bild vergrößern" onclick="openLightbox(2)">
+            <img src="galerie-03.jpg" alt="Galerie 03" loading="lazy">
+          </button>
+          <figcaption>Galerie 03</figcaption>
+        </figure>
+        <figure class="card">
+          <button class="photo-button" type="button" aria-label="Bild vergrößern" onclick="openLightbox(3)">
+            <img src="galerie-04.jpg" alt="Galerie 04" loading="lazy">
+          </button>
+          <figcaption>Galerie 04</figcaption>
+        </figure>
+        <figure class="card">
+          <button class="photo-button" type="button" aria-label="Bild vergrößern" onclick="openLightbox(4)">
+            <img src="galerie-05.jpg" alt="Galerie 05" loading="lazy">
+          </button>
+          <figcaption>Galerie 05</figcaption>
+        </figure>
+        <figure class="card">
+          <button class="photo-button" type="button" aria-label="Bild vergrößern" onclick="openLightbox(5)">
+            <img src="galerie-06.jpg" alt="Galerie 06" loading="lazy">
+          </button>
+          <figcaption>Galerie 06</figcaption>
+        </figure>
+        <figure class="card">
+          <button class="photo-button" type="button" aria-label="Bild vergrößern" onclick="openLightbox(6)">
+            <img src="galerie-07.jpg" alt="Galerie 07" loading="lazy">
+          </button>
+          <figcaption>Galerie 07</figcaption>
+        </figure>
+        <figure class="card">
+          <button class="photo-button" type="button" aria-label="Bild vergrößern" onclick="openLightbox(7)">
+            <img src="galerie-08.jpg" alt="Galerie 08" loading="lazy">
+          </button>
+          <figcaption>Galerie 08</figcaption>
+        </figure>
+        <figure class="card">
+          <button class="photo-button" type="button" aria-label="Bild vergrößern" onclick="openLightbox(8)">
+            <img src="galerie-09.png" alt="Galerie 09" loading="lazy">
+          </button>
+          <figcaption>Galerie 09</figcaption>
+        </figure>
+        <figure class="card">
+          <button class="photo-button" type="button" aria-label="Bild vergrößern" onclick="openLightbox(9)">
+            <img src="galerie-10.jpg" alt="Galerie 10" loading="lazy">
+          </button>
+          <figcaption>Galerie 10</figcaption>
+        </figure>
+        <figure class="card video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="video-01.mp4" type="video/mp4">
             Dein Browser unterstützt dieses Video nicht.
           </video>
-        </div>
-        <p class="small center">Weitere Fotos und Videos können hier ergänzt werden.</p>
-      </div>
-    </section>
+          <figcaption>Ein besonderer Moment der Spa-Party</figcaption>
+        </figure>
+        <figure class="card video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="video-02.mp4" type="video/mp4">
+            Dein Browser unterstützt dieses Video nicht.
+          </video>
+          <figcaption>Schöne Eindrücke von der Feier</figcaption>
+        </figure>
+        <figure class="card video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="video-03.mp4" type="video/mp4">
+            Dein Browser unterstützt dieses Video nicht.
+          </video>
+          <figcaption>Spa-Party und liebevolle Details</figcaption>
+        </figure>
+        <figure class="card video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="video-04.mp4" type="video/mp4">
+            Dein Browser unterstützt dieses Video nicht.
+          </video>
+          <figcaption>Weitere Momente der Geburtstagsfeier</figcaption>
+        </figure>
+  </section>
+</main>
 
-    <section class="cta">
-      <div class="container cta-inner">
-        <div>
-          <p class="eyebrow">Stuttgart · Heilbronn · Umgebung</p>
-          <h2>Bereit für eine ganz besondere Geburtstagsparty?</h2>
-          <p>Fragt jetzt euren Wunschtermin für den Kids Glamour Club an.</p>
-        </div>
-        <a class="button light" href="#kontakt">Jetzt anfragen</a>
-      </div>
-    </section>
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="close" type="button" aria-label="Schließen" onclick="closeLightbox()">×</button>
+  <button class="prev" type="button" aria-label="Vorheriges Bild" onclick="changeImage(-1)">‹</button>
+  <img id="lightboxImage" src="" alt="">
+  <button class="next" type="button" aria-label="Nächstes Bild" onclick="changeImage(1)">›</button>
+  <div class="counter" id="counter"></div>
+</div>
 
-    <section id="kontakt" class="section">
-      <div class="container contact">
-        <div>
-          <p class="eyebrow">Kontakt</p>
-          <h2>Lasst uns eure Party planen</h2>
-          <p>Schreibt uns für Termin, Preis und weitere Informationen.</p>
-        </div>
-        <div class="contact-box">
-          <p><strong>Telefon & WhatsApp</strong><br>
-            <a href="tel:+491727533493">0172 7533493</a><br>
-            <a href="https://wa.me/491727533493" target="_blank" rel="noopener">WhatsApp Nachricht senden</a>
-          </p>
-          <p><strong>E-Mail</strong><br>
-            <a href="mailto:info.myday@web.de">info.myday@web.de</a>
-          </p>
-          <p><strong>Facebook</strong><br>
-            <a class="facebook-link" href="https://www.facebook.com/share/1C9gdfp3Ro/" target="_blank" rel="noopener noreferrer">Auf Facebook besuchen</a>
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
+<script>
+const images = [
+      {src: "galerie-01.jpg", alt: "Galerie 01"},
+      {src: "galerie-02.jpg", alt: "Galerie 02"},
+      {src: "galerie-03.jpg", alt: "Galerie 03"},
+      {src: "galerie-04.jpg", alt: "Galerie 04"},
+      {src: "galerie-05.jpg", alt: "Galerie 05"},
+      {src: "galerie-06.jpg", alt: "Galerie 06"},
+      {src: "galerie-07.jpg", alt: "Galerie 07"},
+      {src: "galerie-08.jpg", alt: "Galerie 08"},
+      {src: "galerie-09.png", alt: "Galerie 09"},
+      {src: "galerie-10.jpg", alt: "Galerie 10"}
+];
+let current = 0;
+const box = document.getElementById("lightbox");
+const img = document.getElementById("lightboxImage");
+const counter = document.getElementById("counter");
 
-  <footer>
-    <div class="container footer">
-      <div><strong>Kids Glamour Club</strong><br>Beauty & Wellness Kindergeburtstage</div>
-      <div>Stuttgart · Heilbronn · Umgebung</div>
-      <div><a class="facebook-footer" href="https://www.facebook.com/share/1C9gdfp3Ro/" target="_blank" rel="noopener noreferrer">Facebook</a> · <a href="#start">Nach oben ↑</a></div>
-    </div>
-  </footer>
+function showImage(index) {
+  current = (index + images.length) % images.length;
+  img.src = images[current].src;
+  img.alt = images[current].alt;
+  counter.textContent = `${current + 1} / ${images.length}`;
+}
+function openLightbox(index) {
+  showImage(index); box.classList.add("open");
+  box.setAttribute("aria-hidden","false"); document.body.style.overflow="hidden";
+}
+function closeLightbox() {
+  box.classList.remove("open"); box.setAttribute("aria-hidden","true");
+  document.body.style.overflow="";
+}
+function changeImage(step) { showImage(current + step); }
+document.addEventListener("keydown", e => {
+  if (!box.classList.contains("open")) return;
+  if (e.key === "Escape") closeLightbox();
+  if (e.key === "ArrowRight") changeImage(1);
+  if (e.key === "ArrowLeft") changeImage(-1);
+});
+</script>
 </body>
 </html>
