@@ -1,12 +1,13 @@
-# Kids Glamour Club – Website
+Kids Glamour Club – komplette Website
 
-Die Website ist eine einfache, responsive One-Page-Website für Beauty- und Wellness-Kindergeburtstage.
+Enthalten:
+- Startseite
+- Pakete
+- Galerie mit 10 Bildern
+- Kontakt mit E-Mail, Telefon, WhatsApp und Facebook
+- Logo
+- Responsive Darstellung für Handy, Tablet und PC
+- Keine Videos mehr
 
-## Vor der Veröffentlichung ändern
-In `index.html` bitte:
-- die WhatsApp-Nummer `491234567890` durch deine echte Nummer ersetzen
-- `info@kidsglamourclub.de` durch deine echte E-Mail-Adresse ersetzen
-- falls gewünscht Texte, Preise und weitere Angebote ergänzen
-
-## Kostenlose Veröffentlichung
-Die Website kann z. B. über GitHub Pages kostenlos veröffentlicht werden. Eine eigene Domain kann dort ebenfalls verwendet werden. Die Domain `kidsglamourclub.de` bleibt dabei bei IONOS.
+Nutzung:
+Alle Dateien und Bilder in denselben Ordner hochladen. Danach index.html als Startseite verwenden.
